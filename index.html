@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang=fi ng-app="jaaraApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="jaarappis.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=600, user-scalable=no">
+  
+  <title>Jaaranaamat</title>
+
+  <!-- Googlen fontit tähän -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+  <!--<link rel="stylesheet" href="css/main.css">-->
+  <!-- Latest compiled and minified JavaScript 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+  <!--<script src="js/angular.js"></script>-->
+  <script src="js/controller.js"></script>
+
+
+</head>
+<body ng-controller="JaaralaisetCtrl">
+		<img class="headerPicture" src="naama.png">
+	<div class="container">
+
+	<div class="searchBarWrapper">
+		<!--Sidebar content-->
+
+		<input type="text" placeholder="Etsi nimellä" ng-model="query">
+
+	</div>
+
+	<!--Body content-->
+
+	<div class="jaaralaiset">
+		<div class="item" ng-repeat="jaaralainen in jaaralaiset | filter:compare">
+			<div class="card">
+			<div class="cardImageWrapper">
+				<img class="cardImage" ng-src="{{jaaralainen.imgUrl}}"></div>
+				<div class="cardNameWrapper">
+					{{jaaralainen.firstname}}
+					{{jaaralainen.lastname}}
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
