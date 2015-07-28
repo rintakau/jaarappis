@@ -87,3 +87,7 @@ border: 1px solid #cbcbcb;
 	text-align: center;
 	line-height: 30px;
 }
+
+.cardNameWrapper span {
+  color: blue;
+}

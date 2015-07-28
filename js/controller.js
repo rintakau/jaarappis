@@ -7,12 +7,14 @@ jaaraApp.controller('JaaralaisetCtrl', function ($scope, $http) {
   });
 
   $scope.compare = function(item) { 
-	  var query = ($scope.query || "").toLowerCase();
-	  var firstName = (item.firstname || "").toLowerCase();
-	  var lastName = (item.lastname || "").toLowerCase();
-	  var fullName = firstName + " " + lastName;
-	  
-	  return firstName.indexOf(query) === 0 || lastName.indexOf(query) === 0 || fullName.indexOf(query) === 0;
+    var query = ($scope.query || "").toLowerCase();
+    var firstName = (item.firstname || "").toLowerCase();
+    var lastName = (item.lastname || "").toLowerCase();
+    var nickName = (item.nickname || "").toLowerCase();
+    var fullName = firstName + " " + lastName;
+
+    return firstName.indexOf(query) === 0 || lastName.indexOf(query) === 0 ||
+      nickName.indexOf(query) === 0 || fullName.indexOf(query) === 0;
   }
 
 });
