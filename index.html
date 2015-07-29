@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=fi ng-app="jaaraApp">
 <head>
-	<link rel="stylesheet" type="text/css" href="jaarappis.css">
+  <link rel="stylesheet" type="text/css" href="jaarappis.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=600, user-scalable=no">
   
@@ -22,31 +22,32 @@
 
 </head>
 <body ng-controller="JaaralaisetCtrl">
-		<img class="headerPicture" src="naama.png">
-	<div class="container">
+    <img class="headerPicture" src="naama.png">
+  <div class="container">
 
-	<div class="searchBarWrapper">
-		<!--Sidebar content-->
+  <div class="searchBarWrapper">
+    <!--Sidebar content-->
 
-		<input type="text" placeholder="Etsi nimellä" ng-model="query">
+    <input type="text" placeholder="Etsi nimellä" ng-model="query">
 
-	</div>
+  </div>
 
-	<!--Body content-->
+  <!--Body content-->
 
-	<div class="jaaralaiset">
-		<div class="item" ng-repeat="jaaralainen in jaaralaiset | filter:compare">
-			<div class="card">
-			<div class="cardImageWrapper">
-				<img class="cardImage" ng-src="{{jaaralainen.imgUrl}}"></div>
-				<div class="cardNameWrapper">
-					{{jaaralainen.firstname}}
-					{{jaaralainen.lastname}}
-				</div>
-			</div>
+  <div class="jaaralaiset">
+    <div class="item" ng-repeat="jaaralainen in jaaralaiset | filter:compare">
+      <div class="card">
+      <div class="cardImageWrapper">
+        <img class="cardImage" ng-src="{{jaaralainen.imgUrl}}"></div>
+        <div class="cardNameWrapper">
+          {{jaaralainen.firstname}}
+          <span ng-if="!!jaaralainen.nickname">"{{jaaralainen.nickname}}"</span>
+          {{jaaralainen.lastname}}
+        </div>
+      </div>
 
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 
 

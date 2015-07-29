@@ -2,6 +2,7 @@
   {
     "lastname": "Jaara",
     "firstname": "Joe",
+    "nickname": "JJ",
     "imgUrl": "http://2.bp.blogspot.com/_b0Mz1rwoCpg/S42ajsQwslI/AAAAAAAABUc/0IIvbXxol5k/s400/sockmonkey.jpg"
   },
   {
@@ -22,6 +23,7 @@
   {
     "lastname": "Valtava",
     "firstname": "Jorma",
+    "nickname": "Johnson",
     "imgUrl": "https://www.gemonitoring.com/sites/gemonitoring.com/files/styles/icon-big/public/Kenichi-Soga_280x280.png?itok=ci8Mn4F3"
   },
 ]
