@@ -40,9 +40,11 @@
       <div class="cardImageWrapper">
         <img class="cardImage" ng-src="{{jaaralainen.imgUrl}}"></div>
         <div class="cardNameWrapper">
-          {{jaaralainen.firstname}}
-          <span ng-if="!!jaaralainen.nickname">"{{jaaralainen.nickname}}"</span>
-          {{jaaralainen.lastname}}
+          <div>
+            {{jaaralainen.firstname}}
+            <span ng-if="!!jaaralainen.nickname">"{{jaaralainen.nickname}}"</span>
+            {{jaaralainen.lastname}}
+          </div>
         </div>
       </div>
 
