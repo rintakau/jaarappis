@@ -76,6 +76,7 @@ input[type=text] {
 
 .card {
   width: 100%;
+  height: 357px;
   margin-bottom: 4px;
   background-color: white;
   padding-left: 5px;
@@ -90,10 +91,18 @@ input[type=text] {
 }
 
 .cardNameWrapper {
-  text-align: center;
-  line-height: 30px;
+  height: 60px;
 }
 
-.cardNameWrapper span {
+.cardNameWrapper div {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.cardNameWrapper div span {
   color: blue;
 }
